@@ -556,6 +556,264 @@
             100% { transform: rotate(360deg); }
         }
 
+        /* Feedback System Styles */
+        .feedback-section {
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-top: 2rem;
+            border: 2px solid var(--border-color);
+        }
+
+        .feedback-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .feedback-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .feedback-export-btn {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .feedback-export-btn:hover {
+            background: #d97706;
+            transform: translateY(-1px);
+        }
+
+        .feedback-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .feedback-group {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .feedback-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .reviewer-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .feedback-input {
+            padding: 0.75rem;
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 0.95rem;
+            transition: var(--transition);
+            background: white;
+        }
+
+        .feedback-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .feedback-textarea {
+            min-height: 120px;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        .rating-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        .star {
+            font-size: 1.5rem;
+            color: #d1d5db;
+            cursor: pointer;
+            transition: var(--transition);
+            user-select: none;
+        }
+
+        .star:hover,
+        .star.active {
+            color: var(--secondary-color);
+        }
+
+        .rating-text {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-left: 0.5rem;
+        }
+
+        .feedback-category {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--border-color);
+            background: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: var(--transition);
+            user-select: none;
+        }
+
+        .category-btn:hover {
+            border-color: var(--primary-color);
+        }
+
+        .category-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .category-btn.concern.active {
+            background: #ef4444;
+            border-color: #ef4444;
+        }
+
+        .category-btn.suggestion.active {
+            background: #3b82f6;
+            border-color: #3b82f6;
+        }
+
+        .category-btn.approval.active {
+            background: #10b981;
+            border-color: #10b981;
+        }
+
+        .category-btn.question.active {
+            background: #f59e0b;
+            border-color: #f59e0b;
+        }
+
+        .feedback-summary {
+            background: var(--bg-primary);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .summary-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 0.75rem;
+            background: white;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        .feedback-list {
+            margin-top: 1.5rem;
+        }
+
+        .feedback-item {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .feedback-item.concern {
+            border-left-color: #ef4444;
+        }
+
+        .feedback-item.suggestion {
+            border-left-color: #3b82f6;
+        }
+
+        .feedback-item.approval {
+            border-left-color: #10b981;
+        }
+
+        .feedback-item.question {
+            border-left-color: #f59e0b;
+        }
+
+        .feedback-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .feedback-reviewer {
+            font-weight: 600;
+        }
+
+        .feedback-text {
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .feedback-rating-display {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .feedback-stars {
+            color: var(--secondary-color);
+        }
+
         /* Scrollbar Styling */
         ::-webkit-scrollbar {
             width: 8px;
@@ -650,6 +908,12 @@
                     <a class="nav-link" onclick="showSlide('spark')">
                         <div class="proposal-title">Spark</div>
                         <div class="proposal-subtitle">Ignition-Focused Brand</div>
+                    </a>
+                </li>
+                <li class="nav-item" style="margin-top: 2rem; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                    <a class="nav-link" onclick="showSlide('feedback-summary')">
+                        <div class="proposal-title">📊 Feedback Summary</div>
+                        <div class="proposal-subtitle">All Comments & Ratings</div>
                     </a>
                 </li>
             </ul>
@@ -1199,6 +1463,377 @@
             }
         };
 
+        // Feedback System Functions
+        let currentRating = {};
+        let currentCategory = {};
+
+        // Initialize feedback system
+        function initializeFeedbackSystem() {
+            // Load existing feedback from localStorage
+            loadAllFeedback();
+            
+            // Set up event listeners for star ratings and category buttons
+            document.addEventListener('click', function(event) {
+                // Handle star rating clicks
+                if (event.target.classList.contains('star')) {
+                    const rating = parseInt(event.target.dataset.rating);
+                    const proposalId = event.target.closest('.star-rating').dataset.proposal;
+                    setRating(proposalId, rating);
+                }
+                
+                // Handle category button clicks
+                if (event.target.classList.contains('category-btn')) {
+                    const category = event.target.dataset.category;
+                    const proposalId = getCurrentProposalId();
+                    setCategory(proposalId, category, event.target);
+                }
+            });
+        }
+
+        // Set star rating
+        function setRating(proposalId, rating) {
+            currentRating[proposalId] = rating;
+            const stars = document.querySelectorAll(`[data-proposal="${proposalId}"] .star`);
+            const ratingText = document.getElementById(`rating-text-${proposalId}`);
+            
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+            
+            const ratingLabels = ['', 'Poor', 'Fair', 'Good', 'Very Good', 'Excellent'];
+            ratingText.textContent = `${rating}/5 - ${ratingLabels[rating]}`;
+        }
+
+        // Set feedback category
+        function setCategory(proposalId, category, buttonElement) {
+            currentCategory[proposalId] = category;
+            
+            // Remove active class from all category buttons in this proposal
+            const allCategoryBtns = buttonElement.closest('.feedback-category').querySelectorAll('.category-btn');
+            allCategoryBtns.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            buttonElement.classList.add('active');
+        }
+
+        // Get current proposal ID
+        function getCurrentProposalId() {
+            const activeSlide = document.querySelector('.slide.active');
+            return activeSlide ? activeSlide.id : null;
+        }
+
+        // Save feedback to localStorage
+        function saveFeedback(proposalId) {
+            const reviewerName = document.getElementById(`reviewer-name-${proposalId}`).value.trim();
+            const reviewerRole = document.getElementById(`reviewer-role-${proposalId}`).value.trim();
+            const feedbackText = document.getElementById(`feedback-text-${proposalId}`).value.trim();
+            const rating = currentRating[proposalId] || 0;
+            const category = currentCategory[proposalId] || 'general';
+
+            // Validation
+            if (!reviewerName) {
+                alert('Please enter your name');
+                return;
+            }
+            if (!feedbackText) {
+                alert('Please enter your feedback');
+                return;
+            }
+            if (rating === 0) {
+                alert('Please provide a rating');
+                return;
+            }
+
+            // Create feedback object
+            const feedback = {
+                id: Date.now().toString(),
+                proposalId: proposalId,
+                reviewerName: reviewerName,
+                reviewerRole: reviewerRole,
+                rating: rating,
+                category: category,
+                text: feedbackText,
+                timestamp: new Date().toISOString()
+            };
+
+            // Save to localStorage
+            let allFeedback = JSON.parse(localStorage.getItem('proposalFeedback') || '[]');
+            allFeedback.push(feedback);
+            localStorage.setItem('proposalFeedback', JSON.stringify(allFeedback));
+
+            // Clear form
+            document.getElementById(`reviewer-name-${proposalId}`).value = '';
+            document.getElementById(`reviewer-role-${proposalId}`).value = '';
+            document.getElementById(`feedback-text-${proposalId}`).value = '';
+            currentRating[proposalId] = 0;
+            currentCategory[proposalId] = null;
+            
+            // Reset UI
+            document.querySelectorAll(`[data-proposal="${proposalId}"] .star`).forEach(star => star.classList.remove('active'));
+            document.getElementById(`rating-text-${proposalId}`).textContent = 'Click to rate';
+            document.querySelectorAll('.category-btn.active').forEach(btn => btn.classList.remove('active'));
+
+            // Reload feedback display
+            loadFeedbackForProposal(proposalId);
+            
+            alert('Feedback saved successfully!');
+        }
+
+        // Load feedback for a specific proposal
+        function loadFeedbackForProposal(proposalId) {
+            const allFeedback = JSON.parse(localStorage.getItem('proposalFeedback') || '[]');
+            const proposalFeedback = allFeedback.filter(f => f.proposalId === proposalId);
+            
+            const feedbackList = document.getElementById(`feedback-list-${proposalId}`);
+            if (!feedbackList) return;
+
+            if (proposalFeedback.length === 0) {
+                feedbackList.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 2rem;">No feedback yet. Be the first to share your thoughts!</p>';
+                return;
+            }
+
+            feedbackList.innerHTML = proposalFeedback.map(feedback => `
+                <div class="feedback-item ${feedback.category}">
+                    <div class="feedback-meta">
+                        <span class="feedback-reviewer">${feedback.reviewerName}${feedback.reviewerRole ? ` (${feedback.reviewerRole})` : ''}</span>
+                        <span>${new Date(feedback.timestamp).toLocaleDateString()}</span>
+                    </div>
+                    <div class="feedback-text">${feedback.text}</div>
+                    <div class="feedback-rating-display">
+                        <span class="feedback-stars">${'★'.repeat(feedback.rating)}${'☆'.repeat(5-feedback.rating)}</span>
+                        <span class="rating-text">${feedback.rating}/5</span>
+                        <span class="category-btn ${feedback.category} active" style="margin-left: auto; pointer-events: none;">
+                            ${getCategoryIcon(feedback.category)} ${feedback.category.charAt(0).toUpperCase() + feedback.category.slice(1)}
+                        </span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Get category icon
+        function getCategoryIcon(category) {
+            const icons = {
+                concern: '🔴',
+                suggestion: '🔵',
+                approval: '🟢',
+                question: '🟡'
+            };
+            return icons[category] || '💬';
+        }
+
+        // Load all feedback
+        function loadAllFeedback() {
+            // This will be called when slides are generated
+        }
+
+        // Export feedback for a proposal
+        function exportFeedback(proposalId) {
+            const allFeedback = JSON.parse(localStorage.getItem('proposalFeedback') || '[]');
+            const proposalFeedback = allFeedback.filter(f => f.proposalId === proposalId);
+            const proposal = proposals[proposalId];
+            
+            if (proposalFeedback.length === 0) {
+                alert('No feedback to export for this proposal.');
+                return;
+            }
+
+            // Create export data
+            const exportData = {
+                proposal: {
+                    id: proposalId,
+                    title: proposal.title,
+                    subtitle: proposal.subtitle,
+                    tagline: proposal.tagline
+                },
+                summary: {
+                    totalFeedback: proposalFeedback.length,
+                    averageRating: (proposalFeedback.reduce((sum, f) => sum + f.rating, 0) / proposalFeedback.length).toFixed(1),
+                    categories: {
+                        concerns: proposalFeedback.filter(f => f.category === 'concern').length,
+                        suggestions: proposalFeedback.filter(f => f.category === 'suggestion').length,
+                        approvals: proposalFeedback.filter(f => f.category === 'approval').length,
+                        questions: proposalFeedback.filter(f => f.category === 'question').length
+                    }
+                },
+                feedback: proposalFeedback
+            };
+
+            // Create downloadable file
+            const dataStr = JSON.stringify(exportData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `${proposalId}-feedback-${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        }
+
+        // Generate feedback summary slide
+        function generateFeedbackSummarySlide() {
+            const allFeedback = JSON.parse(localStorage.getItem('proposalFeedback') || '[]');
+            
+            // Remove existing summary slide
+            const existingSlide = document.getElementById('feedback-summary');
+            if (existingSlide) {
+                existingSlide.remove();
+            }
+
+            // Create summary slide
+            const slide = document.createElement('div');
+            slide.className = 'slide active';
+            slide.id = 'feedback-summary';
+
+            // Calculate statistics
+            const totalFeedback = allFeedback.length;
+            const avgRating = totalFeedback > 0 ? (allFeedback.reduce((sum, f) => sum + f.rating, 0) / totalFeedback).toFixed(1) : 0;
+            const categories = {
+                concerns: allFeedback.filter(f => f.category === 'concern').length,
+                suggestions: allFeedback.filter(f => f.category === 'suggestion').length,
+                approvals: allFeedback.filter(f => f.category === 'approval').length,
+                questions: allFeedback.filter(f => f.category === 'question').length
+            };
+
+            // Group feedback by proposal
+            const feedbackByProposal = {};
+            allFeedback.forEach(feedback => {
+                if (!feedbackByProposal[feedback.proposalId]) {
+                    feedbackByProposal[feedback.proposalId] = [];
+                }
+                feedbackByProposal[feedback.proposalId].push(feedback);
+            });
+
+            slide.innerHTML = `
+                <div class="slide-header">
+                    <h1 class="slide-title">📊 Feedback Summary</h1>
+                    <p class="slide-tagline">Comprehensive overview of all proposal feedback</p>
+                </div>
+
+                <div class="feedback-summary">
+                    <h2 class="summary-title">Overall Statistics</h2>
+                    <div class="summary-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">${totalFeedback}</div>
+                            <div class="stat-label">Total Feedback</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">${avgRating}</div>
+                            <div class="stat-label">Average Rating</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">${categories.concerns}</div>
+                            <div class="stat-label">Concerns</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">${categories.suggestions}</div>
+                            <div class="stat-label">Suggestions</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">${categories.approvals}</div>
+                            <div class="stat-label">Approvals</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">${categories.questions}</div>
+                            <div class="stat-label">Questions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-grid" style="margin-top: 2rem;">
+                    ${Object.keys(feedbackByProposal).map(proposalId => {
+                        const proposalFeedback = feedbackByProposal[proposalId];
+                        const proposal = proposals[proposalId];
+                        const avgProposalRating = (proposalFeedback.reduce((sum, f) => sum + f.rating, 0) / proposalFeedback.length).toFixed(1);
+                        
+                        return `
+                            <div class="content-section">
+                                <h2 class="section-title">${proposal.title} (${proposalFeedback.length} feedback)</h2>
+                                <div class="feedback-rating-display" style="margin-bottom: 1rem;">
+                                    <span class="feedback-stars">${'★'.repeat(Math.round(avgProposalRating))}${'☆'.repeat(5-Math.round(avgProposalRating))}</span>
+                                    <span class="rating-text">${avgProposalRating}/5 average</span>
+                                </div>
+                                <div class="feedback-list">
+                                    ${proposalFeedback.slice(0, 3).map(feedback => `
+                                        <div class="feedback-item ${feedback.category}">
+                                            <div class="feedback-meta">
+                                                <span class="feedback-reviewer">${feedback.reviewerName}</span>
+                                                <span>${new Date(feedback.timestamp).toLocaleDateString()}</span>
+                                            </div>
+                                            <div class="feedback-text">${feedback.text.length > 150 ? feedback.text.substring(0, 150) + '...' : feedback.text}</div>
+                                        </div>
+                                    `).join('')}
+                                    ${proposalFeedback.length > 3 ? `<p style="text-align: center; color: var(--text-secondary);">... and ${proposalFeedback.length - 3} more</p>` : ''}
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+
+                <div class="feedback-section" style="text-align: center;">
+                    <button class="cta-button" onclick="exportAllFeedback()" style="margin-right: 1rem;">Export All Feedback</button>
+                    <button class="feedback-export-btn" onclick="clearAllFeedback()">Clear All Feedback</button>
+                </div>
+            `;
+
+            document.querySelector('.main-content').appendChild(slide);
+        }
+
+        // Export all feedback
+        function exportAllFeedback() {
+            const allFeedback = JSON.parse(localStorage.getItem('proposalFeedback') || '[]');
+            
+            if (allFeedback.length === 0) {
+                alert('No feedback to export.');
+                return;
+            }
+
+            const exportData = {
+                exportDate: new Date().toISOString(),
+                totalFeedback: allFeedback.length,
+                proposals: Object.keys(proposals).map(proposalId => {
+                    const proposalFeedback = allFeedback.filter(f => f.proposalId === proposalId);
+                    return {
+                        id: proposalId,
+                        title: proposals[proposalId].title,
+                        feedbackCount: proposalFeedback.length,
+                        averageRating: proposalFeedback.length > 0 ? (proposalFeedback.reduce((sum, f) => sum + f.rating, 0) / proposalFeedback.length).toFixed(1) : 0,
+                        feedback: proposalFeedback
+                    };
+                })
+            };
+
+            const dataStr = JSON.stringify(exportData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `all-proposals-feedback-${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        }
+
+        // Clear all feedback
+        function clearAllFeedback() {
+            if (confirm('Are you sure you want to clear all feedback? This action cannot be undone.')) {
+                localStorage.removeItem('proposalFeedback');
+                alert('All feedback has been cleared.');
+                // Refresh current slide if it's the summary
+                if (document.getElementById('feedback-summary')) {
+                    generateFeedbackSummarySlide();
+                }
+            }
+        }
+
         // Function to show loading state
         function showLoading() {
             document.getElementById('loading').style.display = 'block';
@@ -1227,6 +1862,8 @@
             setTimeout(() => {
                 if (slideId === 'welcome') {
                     document.getElementById('welcome').classList.add('active');
+                } else if (slideId === 'feedback-summary') {
+                    generateFeedbackSummarySlide();
                 } else {
                     // Generate and show proposal slide
                     generateProposalSlide(slideId);
@@ -1393,10 +2030,71 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="feedback-section">
+                        <div class="feedback-header">
+                            <h2 class="feedback-title">💬 Feedback & Comments</h2>
+                            <button class="feedback-export-btn" onclick="exportFeedback('${proposalId}')">Export Feedback</button>
+                        </div>
+                        
+                        <div class="feedback-form">
+                            <div class="reviewer-info">
+                                <div class="feedback-group">
+                                    <label class="feedback-label">Your Name</label>
+                                    <input type="text" class="feedback-input" id="reviewer-name-${proposalId}" placeholder="Enter your name">
+                                </div>
+                                <div class="feedback-group">
+                                    <label class="feedback-label">Role/Title</label>
+                                    <input type="text" class="feedback-input" id="reviewer-role-${proposalId}" placeholder="Your role or title">
+                                </div>
+                            </div>
+
+                            <div class="feedback-group">
+                                <label class="feedback-label">Overall Rating</label>
+                                <div class="rating-container">
+                                    <div class="star-rating" data-proposal="${proposalId}">
+                                        <span class="star" data-rating="1">★</span>
+                                        <span class="star" data-rating="2">★</span>
+                                        <span class="star" data-rating="3">★</span>
+                                        <span class="star" data-rating="4">★</span>
+                                        <span class="star" data-rating="5">★</span>
+                                    </div>
+                                    <span class="rating-text" id="rating-text-${proposalId}">Click to rate</span>
+                                </div>
+                            </div>
+
+                            <div class="feedback-group">
+                                <label class="feedback-label">Feedback Category</label>
+                                <div class="feedback-category">
+                                    <button type="button" class="category-btn concern" data-category="concern">🔴 Concern</button>
+                                    <button type="button" class="category-btn suggestion" data-category="suggestion">🔵 Suggestion</button>
+                                    <button type="button" class="category-btn approval" data-category="approval">🟢 Approval</button>
+                                    <button type="button" class="category-btn question" data-category="question">🟡 Question</button>
+                                </div>
+                            </div>
+
+                            <div class="feedback-group">
+                                <label class="feedback-label">Comments</label>
+                                <textarea class="feedback-input feedback-textarea" id="feedback-text-${proposalId}" 
+                                    placeholder="Share your thoughts, concerns, suggestions, or questions about this proposal..."></textarea>
+                            </div>
+
+                            <button type="button" class="cta-button" onclick="saveFeedback('${proposalId}')">Save Feedback</button>
+                        </div>
+
+                        <div id="feedback-list-${proposalId}" class="feedback-list">
+                            <!-- Existing feedback will be loaded here -->
+                        </div>
+                    </div>
                 </div>
             `;
 
             document.querySelector('.main-content').appendChild(slide);
+            
+            // Load existing feedback for this proposal
+            setTimeout(() => {
+                loadFeedbackForProposal(proposalId);
+            }, 100);
         }
 
         // Function to toggle mobile sidebar
@@ -1432,6 +2130,9 @@
             
             // Add smooth scrolling
             document.documentElement.style.scrollBehavior = 'smooth';
+            
+            // Initialize feedback system
+            initializeFeedbackSystem();
             
             // Preload first proposal for better UX
             setTimeout(() => {
