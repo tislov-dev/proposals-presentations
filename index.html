@@ -845,73 +845,73 @@
             
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a class="nav-link active" onclick="showSlide('welcome')">
+                    <a class="nav-link active" onclick="showSlide('welcome', this)">
                         <div class="proposal-title">Welcome</div>
                         <div class="proposal-subtitle">Overview & Introduction</div>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="showSlide('elevate')">
+                    <a class="nav-link" onclick="showSlide('elevate', this)">
                         <div class="proposal-title">Elevate</div>
                         <div class="proposal-subtitle">Growth-Focused Brand</div>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="showSlide('catalyst')">
+                    <a class="nav-link" onclick="showSlide('catalyst', this)">
                         <div class="proposal-title">Catalyst</div>
                         <div class="proposal-subtitle">Innovation-Driven Brand</div>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="showSlide('compass')">
+                    <a class="nav-link" onclick="showSlide('compass', this)">
                         <div class="proposal-title">Compass</div>
                         <div class="proposal-subtitle">Navigation-Focused Brand</div>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="showSlide('nexus')">
+                    <a class="nav-link" onclick="showSlide('nexus', this)">
                         <div class="proposal-title">Nexus</div>
                         <div class="proposal-subtitle">Connection-Centered Brand</div>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="showSlide('forge')">
+                    <a class="nav-link" onclick="showSlide('forge', this)">
                         <div class="proposal-title">Forge</div>
                         <div class="proposal-subtitle">Transformation-Focused Brand</div>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="showSlide('quantum')">
+                    <a class="nav-link" onclick="showSlide('quantum', this)">
                         <div class="proposal-title">Quantum</div>
                         <div class="proposal-subtitle">Breakthrough-Oriented Brand</div>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="showSlide('velocity')">
+                    <a class="nav-link" onclick="showSlide('velocity', this)">
                         <div class="proposal-title">Velocity</div>
                         <div class="proposal-subtitle">Speed-Focused Brand</div>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="showSlide('horizon')">
+                    <a class="nav-link" onclick="showSlide('horizon', this)">
                         <div class="proposal-title">Horizon</div>
                         <div class="proposal-subtitle">Future-Focused Brand</div>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="showSlide('pulse')">
+                    <a class="nav-link" onclick="showSlide('pulse', this)">
                         <div class="proposal-title">Pulse</div>
                         <div class="proposal-subtitle">Rhythm-Based Brand</div>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="showSlide('spark')">
+                    <a class="nav-link" onclick="showSlide('spark', this)">
                         <div class="proposal-title">Spark</div>
                         <div class="proposal-subtitle">Ignition-Focused Brand</div>
                     </a>
                 </li>
                 <li class="nav-item" style="margin-top: 2rem; border-top: 1px solid var(--border-color); padding-top: 1rem;">
-                    <a class="nav-link" onclick="showSlide('feedback-summary')">
+                    <a class="nav-link" onclick="showSlide('feedback-summary', this)">
                         <div class="proposal-title">📊 Feedback Summary</div>
                         <div class="proposal-subtitle">All Comments & Ratings</div>
                     </a>
@@ -1843,7 +1843,7 @@
         }
 
         // Function to show a specific slide
-        function showSlide(slideId) {
+        function showSlide(slideId, clickedElement) {
             showLoading();
             
             // Hide all slides
@@ -1870,7 +1870,18 @@
                 }
 
                 // Add active class to clicked nav link
-                event.target.closest('.nav-link').classList.add('active');
+                if (clickedElement) {
+                    const navLink = clickedElement.closest('.nav-link');
+                    if (navLink) {
+                        navLink.classList.add('active');
+                    }
+                } else {
+                    // Fallback: find nav link by slideId
+                    const navLink = document.querySelector(`[onclick*="${slideId}"]`);
+                    if (navLink) {
+                        navLink.classList.add('active');
+                    }
+                }
                 
                 // Close mobile sidebar
                 if (window.innerWidth <= 768) {
