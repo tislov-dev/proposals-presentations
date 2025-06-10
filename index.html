@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional L&D Brand Proposals Presentation - 10 comprehensive learning and development brand strategies">
+    <meta name="author" content="L&D Strategy Team">
+    <title>L&D Brand Proposals - Professional Presentation</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #f59e0b;
+            --accent-color: #10b981;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --text-light: #9ca3af;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --border-radius: 8px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-secondary);
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Navigation Sidebar */
+        .sidebar {
+            width: 320px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: var(--shadow-lg);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .sidebar-header {
+            padding: 0 2rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #ffffff, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .sidebar-subtitle {
+            font-size: 0.875rem;
+            opacity: 0.8;
+            font-weight: 400;
+        }
+
+        .nav-list {
+            list-style: none;
+            padding: 0 1rem;
+        }
+
+        .nav-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 1rem 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transform: translateX(4px);
+        }
+
+        .nav-link.active {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            box-shadow: inset 4px 0 0 var(--secondary-color);
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::before {
+            left: 100%;
+        }
+
+        .proposal-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .proposal-subtitle {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            font-weight: 400;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 320px;
+            padding: 2rem;
+            background-color: var(--bg-primary);
+            min-height: 100vh;
+        }
+
+        .slide {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .slide-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .slide-tagline {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .content-section {
+            background: var(--bg-primary);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .content-section:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--accent-color);
+        }
+
+        .brand-identity {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .identity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .identity-item {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .identity-label {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .identity-value {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .naming-section {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .naming-category {
+            margin-bottom: 2rem;
+        }
+
+        .category-title {
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: var(--border-radius);
+            display: inline-block;
+        }
+
+        .naming-list {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        .naming-item {
+            margin-bottom: 0.75rem;
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: var(--border-radius);
+            border-left: 3px solid var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .naming-item:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: translateX(4px);
+        }
+
+        .naming-label {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .naming-value {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .achievement-section {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .achievement-tiers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .tier {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tier:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .tier::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+        }
+
+        .tier-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .tier-name {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .tier-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .ai-portal-section {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+            border-left: 4px solid #8b5cf6;
+        }
+
+        .ai-portal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .ai-companion, .portal-info {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .companion-name, .portal-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #8b5cf6;
+            margin-bottom: 1rem;
+        }
+
+        .companion-description, .portal-description {
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        /* Welcome Screen */
+        .welcome-slide {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+        }
+
+        .welcome-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ffffff, #e0e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .welcome-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-description {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+        }
+
+        .cta-button:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 280px;
+            }
+            
+            .main-content {
+                margin-left: 280px;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .slide-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                width: 100%;
+            }
+            
+            .sidebar.open {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+                padding: 1rem;
+            }
+            
+            .slide-title {
+                font-size: 1.75rem;
+            }
+            
+            .welcome-title {
+                font-size: 2rem;
+            }
+            
+            .content-section {
+                padding: 1.5rem;
+            }
+            
+            .achievement-tiers {
+                grid-template-columns: 1fr;
+            }
+            
+            .ai-portal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1001;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-tertiary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--text-light);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+    
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h1 class="sidebar-title">L&D Brand Proposals</h1>
+                <p class="sidebar-subtitle">Professional Learning & Development Strategies</p>
+            </div>
+            
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="nav-link active" onclick="showSlide('welcome')">
+                        <div class="proposal-title">Welcome</div>
+                        <div class="proposal-subtitle">Overview & Introduction</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showSlide('elevate')">
+                        <div class="proposal-title">Elevate</div>
+                        <div class="proposal-subtitle">Growth-Focused Brand</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showSlide('catalyst')">
+                        <div class="proposal-title">Catalyst</div>
+                        <div class="proposal-subtitle">Innovation-Driven Brand</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showSlide('compass')">
+                        <div class="proposal-title">Compass</div>
+                        <div class="proposal-subtitle">Navigation-Focused Brand</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showSlide('nexus')">
+                        <div class="proposal-title">Nexus</div>
+                        <div class="proposal-subtitle">Connection-Centered Brand</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showSlide('forge')">
+                        <div class="proposal-title">Forge</div>
+                        <div class="proposal-subtitle">Transformation-Focused Brand</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showSlide('quantum')">
+                        <div class="proposal-title">Quantum</div>
+                        <div class="proposal-subtitle">Breakthrough-Oriented Brand</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showSlide('velocity')">
+                        <div class="proposal-title">Velocity</div>
+                        <div class="proposal-subtitle">Speed-Focused Brand</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showSlide('horizon')">
+                        <div class="proposal-title">Horizon</div>
+                        <div class="proposal-subtitle">Future-Focused Brand</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showSlide('pulse')">
+                        <div class="proposal-title">Pulse</div>
+                        <div class="proposal-subtitle">Rhythm-Based Brand</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showSlide('spark')">
+                        <div class="proposal-title">Spark</div>
+                        <div class="proposal-subtitle">Ignition-Focused Brand</div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Loading presentation...</p>
+            </div>
+
+            <!-- Welcome Slide -->
+            <div class="slide active" id="welcome">
+                <div class="welcome-slide">
+                    <h1 class="welcome-title">L&D Brand Proposals</h1>
+                    <p class="welcome-subtitle">Professional Learning & Development Strategies</p>
+                    <p class="welcome-description">
+                        Explore 10 comprehensive brand proposals designed for Fortune 50 companies. Each proposal offers a unique approach to learning and development, featuring systematic naming conventions, visual identity, achievement systems, and AI-powered learning experiences.
+                    </p>
+                    <a href="#" class="cta-button" onclick="showSlide('elevate')">Start Exploring</a>
+                </div>
+                
+                <div class="content-section">
+                    <h2 class="section-title">About This Presentation</h2>
+                    <p style="margin-bottom: 1rem;">This presentation showcases 10 distinct L&D brand strategies, each tailored for different organizational cultures and strategic priorities:</p>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: 0.5rem; padding: 0.5rem; background: var(--bg-tertiary); border-radius: 4px;">🏔️ <strong>Elevate</strong> - Growth and achievement focus</li>
+                        <li style="margin-bottom: 0.5rem; padding: 0.5rem; background: var(--bg-tertiary); border-radius: 4px;">⚡ <strong>Catalyst</strong> - Innovation and transformation emphasis</li>
+                        <li style="margin-bottom: 0.5rem; padding: 0.5rem; background: var(--bg-tertiary); border-radius: 4px;">🧭 <strong>Compass</strong> - Guidance and navigation focus</li>
+                        <li style="margin-bottom: 0.5rem; padding: 0.5rem; background: var(--bg-tertiary); border-radius: 4px;">🔗 <strong>Nexus</strong> - Connection and collaboration emphasis</li>
+                        <li style="margin-bottom: 0.5rem; padding: 0.5rem; background: var(--bg-tertiary); border-radius: 4px;">🔥 <strong>Forge</strong> - Transformation and craftsmanship focus</li>
+                        <li style="margin-bottom: 0.5rem; padding: 0.5rem; background: var(--bg-tertiary); border-radius: 4px;">⚛️ <strong>Quantum</strong> - Breakthrough thinking emphasis</li>
+                        <li style="margin-bottom: 0.5rem; padding: 0.5rem; background: var(--bg-tertiary); border-radius: 4px;">🚀 <strong>Velocity</strong> - Speed and acceleration focus</li>
+                        <li style="margin-bottom: 0.5rem; padding: 0.5rem; background: var(--bg-tertiary); border-radius: 4px;">🌅 <strong>Horizon</strong> - Future readiness emphasis</li>
+                        <li style="margin-bottom: 0.5rem; padding: 0.5rem; background: var(--bg-tertiary); border-radius: 4px;">🎵 <strong>Pulse</strong> - Rhythm and consistency focus</li>
+                        <li style="margin-bottom: 0.5rem; padding: 0.5rem; background: var(--bg-tertiary); border-radius: 4px;">✨ <strong>Spark</strong> - Ignition and brilliance emphasis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Proposal Slides will be dynamically generated -->
+        </main>
+    </div>
+
+    <script>
+        // Proposal data embedded in JavaScript
+        const proposals = {
+            elevate: {
+                title: "Elevate",
+                subtitle: "The Growth-Focused Brand",
+                tagline: "Rise to every challenge",
+                brandName: "Elevate Learning",
+                mascot: "Apex - A stylized mountain peak that transforms into an upward arrow, representing continuous growth and achievement",
+                visualIdentity: "Deep blues and energizing gold accents, with clean geometric lines suggesting upward movement",
+                liveEvents: [
+                    { label: "Annual flagship", value: "Elevate Summit" },
+                    { label: "Quarterly regional", value: "Rise Sessions" }
+                ],
+                formalPrograms: [
+                    { label: "Leadership development", value: "Peak Leadership Institute" },
+                    { label: "Management training", value: "Ascend Academy" },
+                    { label: "Technical certifications", value: "Pinnacle Programs" }
+                ],
+                connectedExperiences: [
+                    { label: "Quarterly virtual series", value: "Altitude Briefings" },
+                    { label: "Monthly town halls", value: "Base Camp Conversations" }
+                ],
+                educationSeries: [
+                    { label: "New hire onboarding", value: "Foundation Trek" },
+                    { label: "Mid-career development", value: "Progression Pathways" },
+                    { label: "Senior leader preparation", value: "Summit Prep" }
+                ],
+                channels: [
+                    { label: "Skill-based collections", value: "Trails (e.g., Data Analytics Trail)" },
+                    { label: "Role-specific paths", value: "Routes (e.g., Manager Route)" },
+                    { label: "Quick-access resources", value: "Waypoints" }
+                ],
+                onDemand: [
+                    { label: "Microlearning modules", value: "Steps" },
+                    { label: "Comprehensive courses", value: "Expeditions" },
+                    { label: "Resource libraries", value: "Gear Guides" }
+                ],
+                aiCompanion: {
+                    name: "Guide",
+                    description: "An AI learning assistant that provides personalized recommendations and progress tracking"
+                },
+                portal: {
+                    name: "Elevate Hub",
+                    description: "Central access point for all learning resources"
+                },
+                achievementTiers: [
+                    { number: "1", name: "Base Camp", level: "Beginner", description: "Foundation skills and company knowledge" },
+                    { number: "2", name: "Ascent", level: "Intermediate", description: "Developing expertise and leadership capabilities" },
+                    { number: "3", name: "Peak", level: "Advanced", description: "Mastery-level skills and thought leadership" },
+                    { number: "4", name: "Summit", level: "Expert", description: "Innovation leadership and knowledge sharing with others" }
+                ]
+            },
+            catalyst: {
+                title: "Catalyst",
+                subtitle: "The Innovation-Driven Brand",
+                tagline: "Spark your potential",
+                brandName: "Catalyst Learning Network",
+                mascot: "Spark - A dynamic, animated spark/lightning bolt character that represents energy, innovation, and transformation",
+                visualIdentity: "Electric blues and bright orange, with dynamic geometric patterns suggesting energy and connection",
+                liveEvents: [
+                    { label: "Annual conference", value: "Ignite Conference" },
+                    { label: "Innovation showcases", value: "Spark Labs" }
+                ],
+                formalPrograms: [
+                    { label: "Leadership development", value: "Fusion Leadership Academy" },
+                    { label: "Innovation training", value: "Catalyst Institute" },
+                    { label: "Skills development", value: "Amplify Programs" }
+                ],
+                connectedExperiences: [
+                    { label: "Quarterly series", value: "Current Events (playing on electrical current)" },
+                    { label: "Innovation workshops", value: "Lab Sessions" }
+                ],
+                educationSeries: [
+                    { label: "Onboarding", value: "Activation Sequence" },
+                    { label: "Career development", value: "Progression Labs" },
+                    { label: "Advanced training", value: "Mastery Modules" }
+                ],
+                channels: [
+                    { label: "Learning collections", value: "Circuits (e.g., Leadership Circuit)" },
+                    { label: "Skill pathways", value: "Streams (e.g., Technology Stream)" },
+                    { label: "Quick resources", value: "Flash Cards" }
+                ],
+                onDemand: [
+                    { label: "Microlearning", value: "Sparks (5-minute learning moments)" },
+                    { label: "Full courses", value: "Intensives" },
+                    { label: "Resource centers", value: "Knowledge Hubs" }
+                ],
+                aiCompanion: {
+                    name: "Nova",
+                    description: "An AI learning partner that adapts to individual learning styles and career goals"
+                },
+                portal: {
+                    name: "The Grid",
+                    description: "Connected learning ecosystem platform"
+                },
+                achievementTiers: [
+                    { number: "1", name: "Charge", level: "Beginner", description: "Building foundational energy and skills" },
+                    { number: "2", name: "Current", level: "Intermediate", description: "Actively developing and applying capabilities" },
+                    { number: "3", name: "Voltage", level: "Advanced", description: "High-impact performance and leadership" },
+                    { number: "4", name: "Lightning", level: "Expert", description: "Breakthrough innovation and mentoring others" }
+                ]
+            }
+            compass: {
+                title: "Compass",
+                subtitle: "The Navigation-Focused Brand",
+                tagline: "Find your direction",
+                brandName: "Compass Learning",
+                mascot: "True - A friendly compass character with anthropomorphic features, representing guidance, direction, and reliable navigation through career challenges",
+                visualIdentity: "Navy blue and warm gold, with clean circular motifs and directional elements",
+                liveEvents: [
+                    { label: "Annual gathering", value: "True North Conference" },
+                    { label: "Regional events", value: "Bearing Sessions" }
+                ],
+                formalPrograms: [
+                    { label: "Leadership development", value: "Navigator Academy" },
+                    { label: "Management training", value: "Waypoint Institute" },
+                    { label: "Executive programs", value: "Cardinal Leadership" }
+                ],
+                connectedExperiences: [
+                    { label: "Quarterly series", value: "Coordinate Conversations" },
+                    { label: "Skills workshops", value: "Bearing Workshops" }
+                ],
+                educationSeries: [
+                    { label: "New employee", value: "Orientation Expeditions" },
+                    { label: "Mid-career", value: "Course Corrections" },
+                    { label: "Advanced development", value: "Destination Mastery" }
+                ],
+                channels: [
+                    { label: "Learning paths", value: "Routes (e.g., Technical Route)" },
+                    { label: "Skill collections", value: "Maps (e.g., Communication Map)" },
+                    { label: "Resource libraries", value: "Atlases" }
+                ],
+                onDemand: [
+                    { label: "Short lessons", value: "Coordinates (precise learning points)" },
+                    { label: "Full programs", value: "Journeys" },
+                    { label: "Reference materials", value: "Field Guides" }
+                ],
+                aiCompanion: {
+                    name: "Pathfinder",
+                    description: "An AI navigation assistant for personalized learning recommendations and career guidance"
+                },
+                portal: {
+                    name: "Compass Central",
+                    description: "Your learning navigation headquarters"
+                },
+                achievementTiers: [
+                    { number: "1", name: "Explorer", level: "Beginner", description: "Beginning the learning journey with foundational skills" },
+                    { number: "2", name: "Pathfinder", level: "Intermediate", description: "Actively navigating career development and skill building" },
+                    { number: "3", name: "Navigator", level: "Advanced", description: "Leading others and mastering complex challenges" },
+                    { number: "4", name: "Trailblazer", level: "Expert", description: "Creating new paths and pioneering innovative approaches" }
+                ]
+            },
+            nexus: {
+                title: "Nexus",
+                subtitle: "The Connection-Centered Brand",
+                tagline: "Where connections create growth",
+                brandName: "Nexus Learning Network",
+                mascot: "Link - A dynamic character composed of interconnected nodes that light up when forming new connections, symbolizing networked learning and collaboration",
+                visualIdentity: "Modern teal and silver, with network patterns and connection lines suggesting data flow and collaboration",
+                liveEvents: [
+                    { label: "Annual conference", value: "Nexus Summit" },
+                    { label: "Innovation gatherings", value: "Connection Points" }
+                ],
+                formalPrograms: [
+                    { label: "Leadership development", value: "Network Leadership Academy" },
+                    { label: "Technical training", value: "Integration Institute" },
+                    { label: "Management programs", value: "Nexus Masters" }
+                ],
+                connectedExperiences: [
+                    { label: "Quarterly series", value: "Link Sessions" },
+                    { label: "Collaboration workshops", value: "Synergy Series" }
+                ],
+                educationSeries: [
+                    { label: "Onboarding", value: "Connection Foundations" },
+                    { label: "Skills development", value: "Integration Intensives" },
+                    { label: "Advanced training", value: "Network Mastery" }
+                ],
+                channels: [
+                    { label: "Learning collections", value: "Streams (e.g., Data Stream)" },
+                    { label: "Skill pathways", value: "Connections (e.g., Leadership Connection)" },
+                    { label: "Resources", value: "Knowledge Nodes" }
+                ],
+                onDemand: [
+                    { label: "Microlearning", value: "Quick Links" },
+                    { label: "Full courses", value: "Deep Connections" },
+                    { label: "References", value: "Resource Hubs" }
+                ],
+                aiCompanion: {
+                    name: "Synapse",
+                    description: "An AI connector that identifies optimal learning pathways and peer connections"
+                },
+                portal: {
+                    name: "The Nexus",
+                    description: "Your central learning connection point"
+                },
+                achievementTiers: [
+                    { number: "1", name: "Connector", level: "Beginner", description: "Building initial network and foundational skills" },
+                    { number: "2", name: "Integrator", level: "Intermediate", description: "Actively connecting knowledge across domains" },
+                    { number: "3", name: "Architect", level: "Advanced", description: "Designing learning networks and leading connections" },
+                    { number: "4", name: "Visionary", level: "Expert", description: "Creating new connection paradigms and ecosystems" }
+                ]
+            },
+            forge: {
+                title: "Forge",
+                subtitle: "The Transformation-Focused Brand",
+                tagline: "Shape your future",
+                brandName: "Forge Academy",
+                mascot: "Ember - A glowing forge flame character that transforms materials, representing the transformative power of learning and skill development",
+                visualIdentity: "Deep orange and charcoal gray, with metallic accents suggesting strength, craftsmanship, and transformation",
+                liveEvents: [
+                    { label: "Annual summit", value: "Forge Festival" },
+                    { label: "Skills conferences", value: "Transformation Days" }
+                ],
+                formalPrograms: [
+                    { label: "Leadership development", value: "Master Forge Program" },
+                    { label: "Technical excellence", value: "Craft Academy" },
+                    { label: "Innovation training", value: "Forge Labs" }
+                ],
+                connectedExperiences: [
+                    { label: "Quarterly series", value: "Forge Forums" },
+                    { label: "Skills workshops", value: "Craft Sessions" }
+                ],
+                educationSeries: [
+                    { label: "New hire training", value: "Foundation Forge" },
+                    { label: "Career development", value: "Skill Smithing" },
+                    { label: "Executive education", value: "Master Craft Series" }
+                ],
+                channels: [
+                    { label: "Learning paths", value: "Forge Paths (e.g., Analytics Forge Path)" },
+                    { label: "Skill collections", value: "Tool Sets (e.g., Leadership Tool Set)" },
+                    { label: "Resources", value: "Blueprint Library" }
+                ],
+                onDemand: [
+                    { label: "Quick skills", value: "Spark Sessions" },
+                    { label: "Comprehensive courses", value: "Deep Forge" },
+                    { label: "References", value: "Craft Guides" }
+                ],
+                aiCompanion: {
+                    name: "Mentor",
+                    description: "An AI master craftsperson guiding skill development and transformation"
+                },
+                portal: {
+                    name: "Forge Central",
+                    description: "Where skills are crafted and careers transformed"
+                },
+                achievementTiers: [
+                    { number: "1", name: "Apprentice", level: "Beginner", description: "Learning fundamental craft and skills" },
+                    { number: "2", name: "Craftsperson", level: "Intermediate", description: "Developing expertise and specialty skills" },
+                    { number: "3", name: "Master", level: "Advanced", description: "Leading transformation and teaching others" },
+                    { number: "4", name: "Grandmaster", level: "Expert", description: "Innovating new methodologies and setting standards" }
+                ]
+            },
+            quantum: {
+                title: "Quantum",
+                subtitle: "The Breakthrough-Oriented Brand",
+                tagline: "Leap beyond limits",
+                brandName: "Quantum Learning Labs",
+                mascot: "Qubit - A playful quantum particle character that exists in multiple states simultaneously, representing unlimited potential and breakthrough thinking",
+                visualIdentity: "Electric purple and cyan, with particle effects and wave patterns suggesting quantum possibilities",
+                liveEvents: [
+                    { label: "Annual conference", value: "Quantum Leap Summit" },
+                    { label: "Innovation events", value: "Breakthrough Symposiums" }
+                ],
+                formalPrograms: [
+                    { label: "Leadership excellence", value: "Quantum Leadership Institute" },
+                    { label: "Advanced skills", value: "Leap Academy" },
+                    { label: "Innovation programs", value: "Quantum Labs" }
+                ],
+                connectedExperiences: [
+                    { label: "Quarterly series", value: "Quantum Connections" },
+                    { label: "Virtual workshops", value: "Leap Sessions" }
+                ],
+                educationSeries: [
+                    { label: "Foundational learning", value: "Quantum Basics" },
+                    { label: "Advanced development", value: "Leap Forward Programs" },
+                    { label: "Executive education", value: "Quantum Executive Series" }
+                ],
+                channels: [
+                    { label: "Learning tracks", value: "Quantum Paths (e.g., AI Quantum Path)" },
+                    { label: "Skill bundles", value: "Energy Packets (e.g., Innovation Energy Packet)" },
+                    { label: "Resources", value: "Knowledge Particles" }
+                ],
+                onDemand: [
+                    { label: "Micro-content", value: "Quantum Bits" },
+                    { label: "Deep learning", value: "Quantum Dives" },
+                    { label: "Quick references", value: "Particle Guides" }
+                ],
+                aiCompanion: {
+                    name: "Einstein",
+                    description: "An AI genius assistant helping learners make quantum leaps in understanding"
+                },
+                portal: {
+                    name: "Quantum Field",
+                    description: "Where breakthrough learning happens"
+                },
+                achievementTiers: [
+                    { number: "1", name: "Observer", level: "Beginner", description: "Discovering quantum learning possibilities" },
+                    { number: "2", name: "Experimenter", level: "Intermediate", description: "Testing and applying breakthrough concepts" },
+                    { number: "3", name: "Innovator", level: "Advanced", description: "Creating new learning paradigms" },
+                    { number: "4", name: "Pioneer", level: "Expert", description: "Leading quantum leaps in organizational capability" }
+                ]
+            },
+            velocity: {
+                title: "Velocity",
+                subtitle: "The Speed-Focused Brand",
+                tagline: "Accelerate your potential",
+                brandName: "Velocity Institute",
+                mascot: "Dash - A sleek, aerodynamic character with speed trails, embodying rapid skill acquisition and career acceleration",
+                visualIdentity: "Racing green and silver, with motion blur effects and dynamic angles suggesting speed and momentum",
+                liveEvents: [
+                    { label: "Annual summit", value: "Velocity Summit" },
+                    { label: "Regional races", value: "Acceleration Events" }
+                ],
+                formalPrograms: [
+                    { label: "Leadership fast-track", value: "Velocity Leadership Track" },
+                    { label: "Rapid skills", value: "Acceleration Academy" },
+                    { label: "Executive speed", value: "Executive Velocity Program" }
+                ],
+                connectedExperiences: [
+                    { label: "Quarterly series", value: "Speed Sessions" },
+                    { label: "Virtual sprints", value: "Velocity Rounds" }
+                ],
+                educationSeries: [
+                    { label: "Quick start", value: "Launch Pad Series" },
+                    { label: "Career acceleration", value: "Fast Track Programs" },
+                    { label: "Advanced speed", value: "Hyperdrive Education" }
+                ],
+                channels: [
+                    { label: "Learning lanes", value: "Speed Lanes (e.g., Tech Speed Lane)" },
+                    { label: "Skill sprints", value: "Acceleration Tracks (e.g., Sales Acceleration Track)" },
+                    { label: "Resources", value: "Pit Stop Resources" }
+                ],
+                onDemand: [
+                    { label: "Quick hits", value: "Speed Bursts" },
+                    { label: "Intensive courses", value: "Velocity Drives" },
+                    { label: "Fast references", value: "Quick Guides" }
+                ],
+                aiCompanion: {
+                    name: "Turbo",
+                    description: "An AI acceleration coach optimizing learning speed and retention"
+                },
+                portal: {
+                    name: "Velocity Hub",
+                    description: "Your learning acceleration center"
+                },
+                achievementTiers: [
+                    { number: "1", name: "Starter", level: "Beginner", description: "Beginning the acceleration journey" },
+                    { number: "2", name: "Racer", level: "Intermediate", description: "Building speed and momentum" },
+                    { number: "3", name: "Champion", level: "Advanced", description: "Leading the pack and setting pace" },
+                    { number: "4", name: "Legend", level: "Expert", description: "Breaking barriers and creating new speed records" }
+                ]
+            },
+            horizon: {
+                title: "Horizon",
+                subtitle: "The Future-Focused Brand",
+                tagline: "See further, go farther",
+                brandName: "Horizon Learning Experience",
+                mascot: "Vista - A forward-looking character with telescope features, symbolizing vision, foresight, and future readiness",
+                visualIdentity: "Sunrise orange gradient to deep blue, with horizon lines and expansive landscapes",
+                liveEvents: [
+                    { label: "Annual vision summit", value: "Horizon Summit" },
+                    { label: "Future forums", value: "Beyond Conferences" }
+                ],
+                formalPrograms: [
+                    { label: "Leadership foresight", value: "Horizon Leadership Academy" },
+                    { label: "Future skills", value: "Beyond Institute" },
+                    { label: "Strategic programs", value: "Foresight Fellowship" }
+                ],
+                connectedExperiences: [
+                    { label: "Quarterly series", value: "Horizon Scans" },
+                    { label: "Virtual explorations", value: "Future Forums" }
+                ],
+                educationSeries: [
+                    { label: "Foundation future skills", value: "Horizon Basics" },
+                    { label: "Career visioning", value: "Future Path Series" },
+                    { label: "Executive foresight", value: "Strategic Horizons" }
+                ],
+                channels: [
+                    { label: "Learning vistas", value: "Sight Lines (e.g., Innovation Sight Line)" },
+                    { label: "Skill horizons", value: "Future Paths (e.g., Digital Future Path)" },
+                    { label: "Resources", value: "Outlook Libraries" }
+                ],
+                onDemand: [
+                    { label: "Quick views", value: "Glimpses" },
+                    { label: "Deep exploration", value: "Expeditions" },
+                    { label: "Future guides", value: "Horizon Guides" }
+                ],
+                aiCompanion: {
+                    name: "Oracle",
+                    description: "An AI foresight assistant predicting future skill needs and opportunities"
+                },
+                portal: {
+                    name: "Horizon View",
+                    description: "Your window to future learning"
+                },
+                achievementTiers: [
+                    { number: "1", name: "Scout", level: "Beginner", description: "Exploring new horizons" },
+                    { number: "2", name: "Pioneer", level: "Intermediate", description: "Charting new territories" },
+                    { number: "3", name: "Visionary", level: "Advanced", description: "Creating future pathways" },
+                    { number: "4", name: "Luminary", level: "Expert", description: "Illuminating the way for others" }
+                ]
+            },
+            pulse: {
+                title: "Pulse",
+                subtitle: "The Rhythm-Based Brand",
+                tagline: "Stay in sync with success",
+                brandName: "Pulse Learning Network",
+                mascot: "Beat - A rhythmic character with sound wave features, representing the continuous pulse of learning and organizational heartbeat",
+                visualIdentity: "Vibrant magenta and electric blue, with wave patterns and rhythmic visual elements",
+                liveEvents: [
+                    { label: "Annual rhythm summit", value: "Pulse Summit" },
+                    { label: "Beat gatherings", value: "Rhythm Conferences" }
+                ],
+                formalPrograms: [
+                    { label: "Leadership tempo", value: "Leadership Pulse Program" },
+                    { label: "Skills rhythm", value: "Rhythm Academy" },
+                    { label: "Executive beat", value: "Executive Pulse Track" }
+                ],
+                connectedExperiences: [
+                    { label: "Quarterly beats", value: "Pulse Points" },
+                    { label: "Virtual rhythms", value: "Beat Sessions" }
+                ],
+                educationSeries: [
+                    { label: "Starting beat", value: "First Pulse Series" },
+                    { label: "Career rhythm", value: "Career Beat Programs" },
+                    { label: "Advanced tempo", value: "Master Rhythm Series" }
+                ],
+                channels: [
+                    { label: "Learning rhythms", value: "Beat Tracks (e.g., Innovation Beat Track)" },
+                    { label: "Skill waves", value: "Pulse Patterns (e.g., Leadership Pulse Pattern)" },
+                    { label: "Resources", value: "Rhythm Resources" }
+                ],
+                onDemand: [
+                    { label: "Quick beats", value: "Pulse Checks" },
+                    { label: "Deep rhythms", value: "Immersion Beats" },
+                    { label: "Tempo guides", value: "Beat Guides" }
+                ],
+                aiCompanion: {
+                    name: "Tempo",
+                    description: "An AI rhythm master ensuring optimal learning pace and engagement"
+                },
+                portal: {
+                    name: "Pulse Central",
+                    description: "Where learning beats in harmony"
+                },
+                achievementTiers: [
+                    { number: "1", name: "Listener", level: "Beginner", description: "Finding your learning rhythm" },
+                    { number: "2", name: "Performer", level: "Intermediate", description: "Maintaining steady beat and progress" },
+                    { number: "3", name: "Conductor", level: "Advanced", description: "Leading and orchestrating learning rhythms" },
+                    { number: "4", name: "Maestro", level: "Expert", description: "Creating new learning symphonies" }
+                ]
+            },
+            spark: {
+                title: "Spark",
+                subtitle: "The Ignition-Focused Brand",
+                tagline: "Ignite your brilliance",
+                brandName: "Spark Innovation Academy",
+                mascot: "Flare - An energetic spark character with electric personality, representing the ignition of ideas, passion, and potential",
+                visualIdentity: "Bright yellow and electric white, with spark effects and energy bursts",
+                liveEvents: [
+                    { label: "Annual ignition event", value: "Spark Summit" },
+                    { label: "Innovation festivals", value: "Ignition Festivals" }
+                ],
+                formalPrograms: [
+                    { label: "Leadership ignition", value: "Spark Leadership Academy" },
+                    { label: "Innovation programs", value: "Ignition Institute" },
+                    { label: "Creative excellence", value: "Brilliance Programs" }
+                ],
+                connectedExperiences: [
+                    { label: "Quarterly sparks", value: "Ignition Sessions" },
+                    { label: "Virtual energy", value: "Spark Circles" }
+                ],
+                educationSeries: [
+                    { label: "Initial spark", value: "First Spark Series" },
+                    { label: "Career ignition", value: "Career Ignition Path" },
+                    { label: "Executive brilliance", value: "Executive Spark Series" }
+                ],
+                channels: [
+                    { label: "Learning sparks", value: "Ignition Paths (e.g., Innovation Ignition Path)" },
+                    { label: "Skill flames", value: "Spark Trails (e.g., Leadership Spark Trail)" },
+                    { label: "Resources", value: "Fuel Libraries" }
+                ],
+                onDemand: [
+                    { label: "Quick sparks", value: "Flash Points" },
+                    { label: "Deep ignition", value: "Inferno Courses" },
+                    { label: "Spark starters", value: "Ignition Guides" }
+                ],
+                aiCompanion: {
+                    name: "Blaze",
+                    description: "An AI ignition specialist sparking personalized learning breakthroughs"
+                },
+                portal: {
+                    name: "Spark Station",
+                    description: "Where learning ignites"
+                },
+                achievementTiers: [
+                    { number: "1", name: "Kindle", level: "Beginner", description: "Starting the learning fire" },
+                    { number: "2", name: "Flame", level: "Intermediate", description: "Building steady learning energy" },
+                    { number: "3", name: "Torch", level: "Advanced", description: "Lighting the way for others" },
+                    { number: "4", name: "Beacon", level: "Expert", description: "Radiating expertise and innovation" }
+                ]
+            }
+        };
+
+        // Function to show loading state
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+            }, 500);
+        }
+
+        // Function to show a specific slide
+        function showSlide(slideId) {
+            showLoading();
+            
+            // Hide all slides
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+
+            // Remove active class from all nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Show the selected slide
+            setTimeout(() => {
+                if (slideId === 'welcome') {
+                    document.getElementById('welcome').classList.add('active');
+                } else {
+                    // Generate and show proposal slide
+                    generateProposalSlide(slideId);
+                }
+
+                // Add active class to clicked nav link
+                event.target.closest('.nav-link').classList.add('active');
+                
+                // Close mobile sidebar
+                if (window.innerWidth <= 768) {
+                    document.getElementById('sidebar').classList.remove('open');
+                }
+            }, 300);
+        }
+
+        // Function to generate proposal slide
+        function generateProposalSlide(proposalId) {
+            const proposal = proposals[proposalId];
+            if (!proposal) {
+                console.error('Proposal not found:', proposalId);
+                return;
+            }
+
+            // Remove existing proposal slide
+            const existingSlide = document.getElementById(proposalId);
+            if (existingSlide) {
+                existingSlide.remove();
+            }
+
+            // Create new slide
+            const slide = document.createElement('div');
+            slide.className = 'slide active';
+            slide.id = proposalId;
+
+            slide.innerHTML = `
+                <div class="slide-header">
+                    <h1 class="slide-title">${proposal.title}</h1>
+                    <p class="slide-tagline">"${proposal.tagline}"</p>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-section brand-identity">
+                        <h2 class="section-title">Brand Identity</h2>
+                        <div class="identity-grid">
+                            <div class="identity-item">
+                                <div class="identity-label">Brand Name</div>
+                                <div class="identity-value">${proposal.brandName}</div>
+                            </div>
+                            <div class="identity-item">
+                                <div class="identity-label">Tagline</div>
+                                <div class="identity-value">"${proposal.tagline}"</div>
+                            </div>
+                            <div class="identity-item">
+                                <div class="identity-label">Mascot Concept</div>
+                                <div class="identity-value">${proposal.mascot}</div>
+                            </div>
+                            <div class="identity-item">
+                                <div class="identity-label">Visual Identity</div>
+                                <div class="identity-value">${proposal.visualIdentity}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-section naming-section">
+                        <h2 class="section-title">Naming Conventions</h2>
+                        
+                        <div class="naming-category">
+                            <h3 class="category-title">Live Events</h3>
+                            <ul class="naming-list">
+                                ${proposal.liveEvents.map(item => `
+                                    <li class="naming-item">
+                                        <span class="naming-label">${item.label}:</span>
+                                        <span class="naming-value">${item.value}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="naming-category">
+                            <h3 class="category-title">Formal Programs</h3>
+                            <ul class="naming-list">
+                                ${proposal.formalPrograms.map(item => `
+                                    <li class="naming-item">
+                                        <span class="naming-label">${item.label}:</span>
+                                        <span class="naming-value">${item.value}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="naming-category">
+                            <h3 class="category-title">Connected Experiences</h3>
+                            <ul class="naming-list">
+                                ${proposal.connectedExperiences.map(item => `
+                                    <li class="naming-item">
+                                        <span class="naming-label">${item.label}:</span>
+                                        <span class="naming-value">${item.value}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="naming-category">
+                            <h3 class="category-title">Education Series</h3>
+                            <ul class="naming-list">
+                                ${proposal.educationSeries.map(item => `
+                                    <li class="naming-item">
+                                        <span class="naming-label">${item.label}:</span>
+                                        <span class="naming-value">${item.value}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="naming-category">
+                            <h3 class="category-title">Channels/Playlists/Journeys</h3>
+                            <ul class="naming-list">
+                                ${proposal.channels.map(item => `
+                                    <li class="naming-item">
+                                        <span class="naming-label">${item.label}:</span>
+                                        <span class="naming-value">${item.value}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="naming-category">
+                            <h3 class="category-title">On-Demand Learning</h3>
+                            <ul class="naming-list">
+                                ${proposal.onDemand.map(item => `
+                                    <li class="naming-item">
+                                        <span class="naming-label">${item.label}:</span>
+                                        <span class="naming-value">${item.value}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="content-section achievement-section">
+                        <h2 class="section-title">Achievement Tiers</h2>
+                        <div class="achievement-tiers">
+                            ${proposal.achievementTiers.map(tier => `
+                                <div class="tier">
+                                    <div class="tier-number">${tier.number}</div>
+                                    <div class="tier-name">${tier.name}</div>
+                                    <div class="tier-level">(${tier.level})</div>
+                                    <div class="tier-description">${tier.description}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="content-section ai-portal-section">
+                        <h2 class="section-title">AI Companion & Portal</h2>
+                        <div class="ai-portal-grid">
+                            <div class="ai-companion">
+                                <h3 class="companion-name">${proposal.aiCompanion.name}</h3>
+                                <p class="companion-description">${proposal.aiCompanion.description}</p>
+                            </div>
+                            <div class="portal-info">
+                                <h3 class="portal-name">${proposal.portal.name}</h3>
+                                <p class="portal-description">${proposal.portal.description}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.querySelector('.main-content').appendChild(slide);
+        }
+
+        // Function to toggle mobile sidebar
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (window.innerWidth <= 768 && 
+                !sidebar.contains(event.target) && 
+                !menuBtn.contains(event.target) && 
+                sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            const sidebar = document.getElementById('sidebar');
+            if (window.innerWidth > 768) {
+                sidebar.classList.remove('open');
+            }
+        });
+
+        // Initialize the presentation
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('L&D Brand Proposals Presentation Loaded');
+            
+            // Add smooth scrolling
+            document.documentElement.style.scrollBehavior = 'smooth';
+            
+            // Preload first proposal for better UX
+            setTimeout(() => {
+                generateProposalSlide('elevate');
+                document.getElementById('elevate').classList.remove('active');
+            }, 1000);
+        });
+    </script>
+</body>
+</html> 
