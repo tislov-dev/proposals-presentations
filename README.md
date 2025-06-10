@@ -4,7 +4,7 @@ A comprehensive, interactive HTML presentation showcasing 10 distinct Learning &
 
 ## 🚀 Live Demo
 
-**GitHub Pages URL:** `https://[your-username].github.io/[repository-name]/`
+**GitHub Pages URL:** `https://tislov-dev.github.io/proposals-presentations/`
 
 ## 📋 Overview
 
@@ -72,7 +72,7 @@ This presentation features 10 professionally designed L&D brand proposals, each 
    - Select "Deploy from a branch"
    - Choose "main" branch and "/ (root)" folder
    - Click "Save"
-4. **Access your presentation** at `https://[username].github.io/[repository-name]/`
+4. **Access your presentation** at `https://tislov-dev.github.io/proposals-presentations/`
 
 ### Alternative: Using GitHub CLI
 
