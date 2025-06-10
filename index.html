@@ -2091,9 +2091,13 @@
 
             document.querySelector('.main-content').appendChild(slide);
             
+            // Debug: Log that slide was created
+            console.log('Generated slide for:', proposalId, 'with feedback section');
+            
             // Load existing feedback for this proposal
             setTimeout(() => {
                 loadFeedbackForProposal(proposalId);
+                console.log('Loaded feedback for:', proposalId);
             }, 100);
         }
 
@@ -2127,12 +2131,14 @@
         // Initialize the presentation
         document.addEventListener('DOMContentLoaded', function() {
             console.log('L&D Brand Proposals Presentation Loaded');
+            console.log('Feedback system initializing...');
             
             // Add smooth scrolling
             document.documentElement.style.scrollBehavior = 'smooth';
             
             // Initialize feedback system
             initializeFeedbackSystem();
+            console.log('Feedback system initialized');
             
             // Preload first proposal for better UX
             setTimeout(() => {
